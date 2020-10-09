@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title> Q7 PHP</title>
+</head>
+<body>
+	<h3>Determine if a string has all unique characters..</h3>
+<input type="text" size="20" id="string">
+<button onclick="search()">check</button>
+<br>
+<br>
+<h4 id="hasil"></h4>
+</form>
+</body>
+</html>
+<script>
+function search() {
+	var n=document.getElementById("string").value;
+	if(cek(n)){
+		document.getElementById("hasil").innerHTML = n+" has all unique characters";
+	}else{
+		document.getElementById("hasil").innerHTML = n+" doesn't have all unique characters";
+	}
+	}
+function cek(str){
+	var obj = [];
+  for(var z=0;z<str.length;++z) {
+    var ch = str[z];
+    if(obj[ch]) return false; else obj[ch] = true;
+  }
+  return true;
+
+}
+</script>
+
+</body>
+</html>

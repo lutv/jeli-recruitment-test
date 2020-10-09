@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title> Q6 PHP</title>
+</head>
+<body>
+	<h3>The Fibonacci numbers are the numbers in the following integer sequence.</h3>
+<h3>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144,..</h3>
+You're looking for 
+<input type="text" size="2" id="string">th sequence
+<button onclick="search()">Cari</button>
+<br>
+<br>
+<h4 id="hasil"></h4>
+</form>
+</body>
+</html>
+<script>
+function search() {
+	var fab=[];
+	var start=0;
+	var now=1;
+	var index=2;
+	fab[0]=start;
+	fab[1]=now;
+	var fab_value;
+	for (var i = 0; i <= 100; i++) {
+		fab_value=start+now;
+		fab[index++]=fab_value;
+
+		start=now;
+		now=fab_value;
+	}
+	var n=document.getElementById("string").value;
+
+	var hasil=fab[n];
+	document.getElementById("hasil").innerHTML = hasil;	
+	}
+</script>
+
+</body>
+</html>

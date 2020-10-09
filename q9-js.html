@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title> Q5 PHP</title>
+	<script type="text/javascript">
+		var given="Taumatawhakatangihanga";
+	</script>
+</head>
+<body>
+	<h3>Given String</h3>
+	<h6 id="aa"></h6>
+<input type="text" id="string">
+<button onclick="replace()">remove</button>
+<br>
+<br>
+<h4 id="hasil"></h4>
+</form>
+</body>
+</html>
+<script>
+	document.getElementById("aa").innerHTML = given;
+function replace() {
+	var n=document.getElementById("string").value;
+	var hasil=given.replace(/+n+/g, "");
+	document.getElementById("hasil").innerHTML = hasil;	
+	}
+</script>
+
+</body>
+</html>

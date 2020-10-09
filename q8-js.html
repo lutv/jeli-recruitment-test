@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title> Q8 PHP</title>
+	<script type="text/javascript">
+		var numbers=[];
+		for (var i = 0; i < 25; i++) {
+			numbers[i]=Math.floor(Math.random()*1000);
+		}
+	</script>
+</head>
+<body>
+	<h3>Given Array</h3>
+	<h4 id="arr"></h4>
+<button onclick="search()">check</button>
+<br>
+<br>
+<h4 id="hasil"></h4>
+</form>
+</body>
+</html>
+<script>
+	var x=numbers.toString();
+		document.getElementById("arr").innerHTML=x;
+function search() {
+	var max=numbers[0];
+	var min=numbers[0];
+	for(var s=0;s<numbers.length;s++){
+		if (max>numbers[s]) {
+			max=numbers[s];
+		}else if (min<numbers[s]) {
+			min=numbers[s];
+		}
+	}
+		document.getElementById("hasil").innerHTML = "Max = "+max+" and Min = "+min;
+	}
+</script>
+
+</body>
+</html>

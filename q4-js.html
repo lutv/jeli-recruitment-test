@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title> Q4 PHP</title>
+</head>
+<body>
+	<h3>Pencarian fakrorial suatu bilangan</h3>
+<input type="text" id="faktorial" name="faktorial">
+<button onclick="faktorial()">Cari</button>
+<br>
+<br>
+<h4 id="hasil"></h4>
+</form>
+</body>
+</html>
+<script>
+function faktorial() {
+	var total=1;
+	var n=document.getElementById("faktorial").value;
+
+	if (n<=1) {
+		total=1;
+	}else{
+	for ( s = 1 ; s <= (n-1); s++) {
+		   total=total*(s+1);
+		}
+	}
+	document.getElementById("hasil").innerHTML = " Hasil dari "+n+"! adalah "+total;	
+	}
+</script>
+
+</body>
+</html>
